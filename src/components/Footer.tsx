@@ -40,7 +40,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
               <img
-                src="/logo.png"
+                src="/logo.jpg"
                 alt="Farnsher"
                 className="h-10 w-10 object-contain"
                 style={{ filter: 'drop-shadow(0 0 8px rgba(56,189,248,0.6))' }}
