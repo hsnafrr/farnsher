@@ -15,12 +15,6 @@ export default function Home({ onNavigate }: HomeProps) {
     { icon: Package, title: t.home.pillar3Title, desc: t.home.pillar3Desc, gradient: 'from-pink-500 to-rose-600', glow: 'rgba(236,72,153,0.3)', page: 'products' },
   ];
 
-  const featuredServices = [
-    { name: 'Landing Page', price: 'Rp 1.000.000+', img: '/landing.jpg' },
-    { name: 'E-Commerce', price: 'Rp 4.000.000+', img: '/ecom.jpg' },
-    { name: 'Company Profile', price: 'Rp 2.000.000+', img: '/company.jpg' },
-  ];
-
   const selectedWork = [
     { title: 'Morph3D', type: '3D Company Profile', url: 'https://morph3d.vercel.app/' },
     { title: 'Morfosa Transport', type: 'Business Website', url: 'https://morfosatransportrent.netlify.app/' },
