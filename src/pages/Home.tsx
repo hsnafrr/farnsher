@@ -15,12 +15,6 @@ export default function Home({ onNavigate }: HomeProps) {
     { icon: Package, title: t.home.pillar3Title, desc: t.home.pillar3Desc, gradient: 'from-pink-500 to-rose-600', glow: 'rgba(236,72,153,0.3)', page: 'products' },
   ];
 
-  const featuredServices = [
-    { name: 'Landing Page', price: 'Rp 1.000.000+' },
-    { name: 'E-Commerce', price: 'Rp 4.000.000+' },
-    { name: 'Company Profile', price: 'Rp 2.000.000+' },
-  ];
-  
   const selectedWork = [
     { title: 'Morph3D', type: '3D Company Profile', url: 'https://morph3d.vercel.app/' },
     { title: 'Morfosa Transport', type: 'Business Website', url: 'https://morfosatransportrent.netlify.app/' },
@@ -131,40 +125,6 @@ export default function Home({ onNavigate }: HomeProps) {
                 <p className="text-sm text-muted leading-relaxed">{p.desc}</p>
                 <div className="mt-6 flex items-center gap-1 text-sm font-semibold text-sky-500 opacity-0 group-hover:opacity-100 transition-opacity">
                   Learn more <ArrowRight size={14} />
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Services */}
-      <section className="section-pad relative z-10">
-        <div className="container-max">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-sky-500 mb-2 block">Services</span>
-              <h2 className="heading-lg heading-text">{t.home.featuredServices}</h2>
-            </div>
-            <button onClick={() => onNavigate('services')} className="hidden md:flex items-center gap-1 text-sm font-semibold text-sky-500 hover:gap-2 transition-all">
-              View all <ArrowRight size={14} />
-            </button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredServices.map((s, i) => (
-              <button
-                key={i}
-                onClick={() => onNavigate('services')}
-                className="card-glass overflow-hidden text-left group animate-fade-up"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img src={s.img} alt={s.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(2,6,23,0.7) 0%, transparent 60%)' }} />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-base font-bold heading-text mb-1">{s.name}</h3>
-                  <p className="text-sm font-semibold grad-text">{s.price}</p>
                 </div>
               </button>
             ))}
