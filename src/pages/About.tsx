@@ -2,6 +2,10 @@ import { Mail, Phone, MapPin, Linkedin, Instagram, Youtube, Code, Bot, Package, 
 import { useApp } from '../contexts/AppContext';
 import VideoBackground from '../components/VideoBackground';
 
+// 1. Import foto dari folder src/images
+// Pastikan path '../images/profil.jpg' sesuai dengan letak file komponen ini
+import profilPic from '../images/profil.jpg'; 
+
 export default function About() {
   const { t } = useApp();
 
@@ -35,7 +39,8 @@ export default function About() {
                 <div className="absolute -inset-1 rounded-3xl opacity-60 blur-md"
                   style={{ background: 'linear-gradient(135deg, #0ea5e9, #8b5cf6, #ec4899)' }} />
                 <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-sky-500/20">
-                  <img src="/profil.jpg" alt="Hasan Aufar" className="w-full h-full object-cover" />
+                  {/* 2. Panggil variabel import profilPic di dalam tag img */}
+                  <img src={profilPic} alt="Hasan Aufar" className="w-full h-full object-cover" />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%)' }} />
                 </div>
               </div>
